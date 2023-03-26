@@ -1,0 +1,73 @@
+---
+title: "Çalışmanızın Başlığı"
+author: 
+  - Haktan Erarslan[^1]
+bibliography: bibliography/biblio.bib
+csl: csl/apa-tr.csl
+header-includes:
+  - \usepackage{polyglossia}
+  - \setmainlanguage{turkish}
+  - \usepackage{booktabs}
+  - \usepackage{caption} 
+  - \captionsetup[table]{skip=10pt}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 3
+    fig_width: 4
+    keep_tex: no
+    latex_engine: xelatex
+    number_sections: yes
+    toc: no
+geometry: margin=1in
+link-citations: yes
+urlcolor: blue
+fontsize: 12pt
+biblio-style: apalike
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+<!-- ======================================================================= -->
+<!-- ============================== NOTLAR ================================= -->
+<!-- ======================================================================= -->
+[^1]: 20080307
+
+# Giriş
+
+Erkek egemen toplumda kadının kadın işgücünün önem kazanmasını Dünya Savaşları tetiklemiş ve artık emeğin kol gücünden ziyade zihinsel emeğe dönüşmesiyle erkek kadın işgücü arasındakı farklılaşma daha da azalmıştır. Aynı işi yapmalarına rağmencinsiyete göre ücret farklılaşması günümüzde dahi mevcuttur. 
+Araştırmada kullanılan veri [Github](https://github.com/)'dan [TidyTuesday](https://github.com/rfordatascience/tidytuesday) reposundan  alınmıştır. Veri 125 gözlem değerinden ve 17 değişkenden oluşuyor. *EmployerName* veri alınan şirket ismini, *Address* kurumun adresini,*DiffMeanHourlyPercent* ücretlerin cinsiyete göre ortalamalarındaki farkları(Rakamın eksi olması kadınların ortalamasının fazla olduğunu gösteriyor), *DiffMedianHourlyPercent* cinsiyetlere göre median değerler arasındaki farklılıkları, *DiffMeanBonusPercent* ve *DiffMedianBonusPercent* sırasıyla cinsiyetlere göre verilen bonusların ortalama ve mediana göre farklılıkları, *MaleBonusPercent* ve *FemaleBonusPercent* sırasıyla kurumda çalışan erkeklerin ve kadınların bonus alma yüzdesini,*MaleLowerQuartile*, *FemaleLowerQuartile*, *MaleLowerMiddleQuartile*, *FemaleLowerMiddleQuartile*, *MaleUpperMiddleQuartile*, *FemaleUpperMiddleQuartile*, *MaleTopQuartile* ve *FemaleTopQuartile* sırasınca 0-25, 25-50, 50-75 ve 75-100 yüzdeliklerinin kaçının erkek ve kadınlardan oluştuğunu gösteriyor ve son olarak *EmployerSize* kurumun büyüklüyüğünü gösteriyor.
+
+```{r include=FALSE}
+library(tinytex)
+library(tidyverse)
+library(readr)
+df <- read_csv("data/ukgenderpay.csv")
+df <- subset(df, select = -c(DueDate, DateSubmitted,PostCode,CompanyNumber,SicCodes,SubmittedAfterTheDeadline,CompanyLinkToGPGInfo,CurrentName,EmployerId, PostCode,ResponsiblePerson))
+             
+nrow(df)
+ncol(df)
+
+
+
+```
+
+
+
+## Çalışmanın Amacı
+Bu çalışmada cinsiyetlere göre şirketlerde ücret konusunda farklılaşma olup olmadığını test edeceğim ve şirketin büyüklüğüne göre bir farkın olup olmadığına da bakacağım. Şirketlerin büyüklüklerine göre de ücret farklılıkları arasında nasıl dağıldığına regresyon analiziyle bakılacaktır. 
+
+## Literatür 
+Dünyadaki hemen hemen bütün ülkelerin ortak problemini oluşturan yoksulluğun temel sebebi kaynakların halk arasında adil dağıtılamaması anlamına gelen gelir eşitsizliği olgusudur. Gelir eşitsizliği ise en çok hakim ataerkil toplumsal cinsiyet rollerinin etkisi altında bırakılan, eğitim seviyesinin ve işgücüne katılımlarının düşük olduğu kadınları olumsuz etkilemektedir. Gelir dağılımı eşitsizliği kadınları yoksullaştırmakta, işgücüne katılımlarını düşürmektedir[@turgut].
+
+
+Bu bölümde konu ile ilgili olarak okuduğunuz makaleleri referans vererek tartışınız. **Her makaleyi ayrı başlık altında tek tek özetlemeyiniz.** Literatür taramasında **en az altı** makaleye atıf yapılması ve bu makalelerden **en az ikisinin İngilizce** olması gerekmektedir.
+
+
+**_Taslakta bu cümleden sonra yer alan hiçbir şey silinmemelidir._**
+
+\newpage
+# Kaynakça {#references}
+<div id="refs"></div>
+
