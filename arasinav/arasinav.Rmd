@@ -2,8 +2,8 @@
 title: "Kadın Erkek Gelir Eşitsizliği üzerine Araştırma"
 author: 
   - Haktan Erarslan[^1]
-bibliography: bibliography/biblio.bib
-csl: csl/apa-tr.csl
+bibliography: ../bibliography/biblio.bib
+csl: ../csl/apa-tr.csl
 header-includes:
   - \usepackage{polyglossia}
   - \setmainlanguage{turkish}
@@ -32,7 +32,7 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== NOTLAR ================================= -->
 <!-- ======================================================================= -->
-[^1]: 20080307
+[^1]: 20080307, [Github Repo](https://github.com/HaktanErarslan/Arasinav)
 
 # Giriş
 
@@ -43,7 +43,7 @@ Araştırmada kullanılan veri [Github](https://github.com/)'dan [TidyTuesday](h
 library(tinytex)
 library(tidyverse)
 library(readr)
-df <- read_csv("data/ukgenderpay.csv")
+df <- read_csv("../data/ukgenderpay.csv")
 df <- subset(df, select = -c(DueDate, DateSubmitted,PostCode,CompanyNumber,SicCodes,SubmittedAfterTheDeadline,CompanyLinkToGPGInfo,CurrentName,EmployerId, PostCode,ResponsiblePerson))
              
 nrow(df)

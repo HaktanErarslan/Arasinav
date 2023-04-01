@@ -171,7 +171,7 @@ finale girmemiş sayılacaksınız.**
 **Mazeret (Bütünleme) Sınavınız hem Proje Önerisi (Proje) teslimi hem de
 ek bir Sınav şeklinde olacak.**
 
-1.  **Ara Sınav - Proje Önerisi Teslimi:** İlan Edilecek
+1.  **Ara Sınav - Proje Önerisi Teslimi:** 16 Nisan 2023, 23:59
 2.  **Final Sınavı - Proje Teslimi:** İlan Edilecek
 
 ## Proje Önerisi
@@ -350,11 +350,11 @@ Proje reponuzda aşağıdaki klasörler ve dosyalar olmalıdır:
 -   `/bibliography/biblio.bib`: Kaynakça Dosyası
 -   `/csl/`: Kaynakça Stil Klasörü
 -   `/data/`: CSV, RDS, vs. Formatındaki Veri Setinin Yer aldığı Klasör
--   `/proposal/`: Proje Önerisi Klasörü
--   `/proposal/proposal.Rmd` + `/proposal/proposal.pdf`: Proje Önerisi
+-   `/arasinav/`: Proje Önerisi Klasörü
+-   `/arasinav/arasinav.Rmd` + `/arasinav/arasinav.pdf`: Proje Önerisi
     Metni
 -   `README.Rmd` + `README.md`: README Dosyaları
--   `proposal.Rproj`: RStudio Proposal Dosyası
+-   `arasinav.Rproj`: RStudio Proposal Dosyası
 
 Bu projede stil ve biçim önemli olduğundan, lütfen her şeyin iyi
 göründüğünden, verilerinizin ve kodunuzun doğru biçimlendirildiğinden
